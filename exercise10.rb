@@ -21,3 +21,14 @@ students.store(:cohort4, 43)
 
 puts '#4.'
 puts students.keys
+
+puts '#5.'
+students.each do |key, value|
+  students.store(key, (value * 105)/100)
+end
+
+students.print_hash
+
+puts '#6.'
+students.delete(:cohort2)
+students.print_hash

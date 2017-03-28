@@ -34,3 +34,13 @@ class Array
 end
 
 grocery_list.check_list("bananas")
+
+puts '#4'
+puts grocery_list[1]
+
+puts '#5.'
+grocery_list.sort.print_list
+
+puts '#6'
+grocery_list.delete("salmon")
+grocery_list.print_list

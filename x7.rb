@@ -1,5 +1,9 @@
-def wrap_text(text, wrapper)
-  (wrapper.to_s + text.to_s) + wrapper.to_s
+class String
+
+  def wrap_text(wrapper)
+    (wrapper.to_s + self.to_s) + wrapper.to_s
+  end
+
 end
 
-puts wrap_text(wrap_text(wrap_text('new message', '###'), '==='), '---') 
+puts "new message".wrap_text('###').wrap_text('===').wrap_text('---')

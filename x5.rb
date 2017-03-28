@@ -7,7 +7,7 @@ def greet_backwards(name)
     name[-pair_index] = temp
     pair_index += 1
   end
-  greeting = "Hello #{name}! Welcome home."
+  greeting = "Hello #{name}#{name}! Welcome home."
   return greeting
 end
 

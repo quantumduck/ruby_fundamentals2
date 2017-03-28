@@ -4,10 +4,10 @@ class Array
   def money_add
     total = 0
     self.each do |amt|
-      total += (100.00 * amt).to_i
+      total += (1000.00 * amt).to_i
       # puts total
     end
-    total.to_f / 100.00
+    total.to_f / 1000.00
   end
 end
 

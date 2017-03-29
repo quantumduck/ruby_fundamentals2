@@ -6,10 +6,13 @@ my_dogs = [
 ]
 
 def get_absent_dogs(dogs, yard_depth = 10)
-  absentees =
-  dogs.select do |dog|
-    dog[:position] > yard_depth
+  absentees = []
+  dogs.each do |dog|
+    if (dog[:position] > yard_depth)
+      absentees << dog
+    end
   end
+  absentees
 end
 
 def call_absent_dogs(dogs, yard_depth = 10)
@@ -19,4 +22,26 @@ def call_absent_dogs(dogs, yard_depth = 10)
   end
 end
 
-call_absent_dogs(my_dogs)
+
+def chase_squirrel(dogs)
+  dogs.map! do |dog|
+    dog[:position] += 5
+    dog
+  end
+  dogs
+end
+
+def return_dogs(dogs)
+  dogs.map! do |dog|
+    dog[:position] = 0
+    dog
+  end
+  dogs
+end
+
+
+puts my_dogs
+puts
+puts chase_squirrel(my_dogs)
+puts
+puts return_dogs(my_dogs)

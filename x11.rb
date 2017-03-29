@@ -5,6 +5,11 @@ my_dogs = [
   { :name => 'Jade', :position => 11 },
 ]
 
+other_dogs = [
+  { :name => 'Pavlov', :position => 50 },
+  { :name => 'Applecrisp', :position => -8 },
+]
+
 def get_absent_dogs(dogs, yard_depth = 10)
   absentees = []
   dogs.each do |dog|
@@ -22,4 +27,4 @@ def call_absent_dogs(dogs, yard_depth = 10)
   end
 end
 
-call_absent_dogs(my_dogs)
+call_absent_dogs(my_dogs + other_dogs)
